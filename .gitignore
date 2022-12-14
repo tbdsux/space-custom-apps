@@ -1,0 +1,5 @@
+# output should be 'app' if it compiles to binary
+app
+
+# generated .space folder in each directory when testing
+.space
