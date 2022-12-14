@@ -6,6 +6,8 @@ These are custom apps tailored for programming languages / frameworks that are n
 
 ### Languages
 
+- [Nim](./nim-lang/)
+
 ## How to add your own ?
 
 Always check if the programming language already exists in the repository example.
