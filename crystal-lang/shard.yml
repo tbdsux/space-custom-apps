@@ -1,0 +1,17 @@
+name: app
+version: 0.1.0
+
+authors:
+  - TheBoringDude <iamcoderx@gmail.com>
+
+targets:
+  app:
+    main: src/app.cr
+
+dependencies:
+  grip:
+    github: grip-framework/grip
+
+crystal: 1.6.2
+
+license: MIT
