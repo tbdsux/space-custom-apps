@@ -1,0 +1,10 @@
+# https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: remix
+    src: .
+    engine: nodejs16
+    primary: true
+    commands:
+      - npm run build
+    run: "NODE_ENV=production node ./server.js"
