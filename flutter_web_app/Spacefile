@@ -1,0 +1,13 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: web
+    src: .
+    commands:
+      - apt-get install unzip wget
+      - git clone https://github.com/flutter/flutter.git -b stable
+      - ./flutter/bin/flutter precache --web
+      - ./flutter/bin/flutter build web
+    serve: build/web
+    engine: static
+    primary: true
