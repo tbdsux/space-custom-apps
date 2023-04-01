@@ -9,6 +9,16 @@ These are custom apps tailored for programming languages / frameworks that are n
 - [Nim](./nim-lang/)
 - [Crystal](./crystal-lang/)
 - [Dart](./dart-lang/)
+  - [Flutter Web](./flutter_web_app/) (does not work)
+- [PHP](./php/)
+- Dotnet
+  - [FSharp](./fsharp/)
+  - [CSharp](./csharp/)
+
+**Some things to note:**
+
+- These `Spacefile/s` and starters are not tested on bigger / large projects. Use it accordingly.
+- Base your project from the Spacefile provided, do not just copy-paste.
 
 ### [Javascript Frameworks](./javascript-frameworks/README.md)
 
