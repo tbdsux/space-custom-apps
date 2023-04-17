@@ -11,4 +11,5 @@ micros:
     include:
       - app
     run: ./app
+    dev: nimble run
     

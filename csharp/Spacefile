@@ -13,4 +13,5 @@ micros:
     engine: custom
     include:
       - bin/Debug/net7.0/linux-x64/publish/csharp
-    run: ASPNETCORE_URLS=http://+:8080 ./csharp
+    run: ASPNETCORE_URLS=http://+:${PORT} ./csharp
+    dev: dotnet run --urls http://localhost:${PORT}

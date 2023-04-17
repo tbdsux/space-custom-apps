@@ -2,6 +2,12 @@
 
 CSharp (C#) on Space
 
+## Dev
+
+```
+space dev
+```
+
 ### Framework
 
 Asp.Net Minimal Web API - https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-7.0&tabs=visual-studio
@@ -29,7 +35,8 @@ micros:
     engine: custom
     include:
       - bin/Debug/net7.0/linux-x64/publish/csharp
-    run: ASPNETCORE_URLS=http://+:8080 ./csharp
+    run: ASPNETCORE_URLS=http://+:${PORT} ./csharp
+    dev: dotnet run --urls http://localhost:${PORT}
 ```
 
 ### More readings

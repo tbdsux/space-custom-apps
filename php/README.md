@@ -2,6 +2,12 @@
 
 PHP on Space!
 
+## Dev
+
+```
+space dev
+```
+
 ### Framework
 
 [Slim](https://github.com/slimphp/Slim) - https://github.com/slimphp/Slim
@@ -27,6 +33,7 @@ micros:
       - ./bin/php composer.phar install
     engine: custom
     run: "./bin/php -S 0.0.0.0:8080 -t public"
+    dev: "php -S 0.0.0.0:${PORT} -t public"
 ```
 
 \*\* Latest composer doesn't work on `<8.1.10` versions of php (I don't know why~~)

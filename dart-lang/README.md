@@ -2,6 +2,12 @@
 
 Dart Lang on space.
 
+## Dev
+
+```
+space dev
+```
+
 ### Framework
 
 [Shelf](https://github.com/dart-lang/shelf/tree/master/pkgs/shelf) - https://github.com/dart-lang/shelf/tree/master/pkgs/shelf
@@ -32,4 +38,5 @@ micros:
       - myapp
     run: ./myapp
     primary: true
+    dev: dart run :server # replace `server` with your main server file
 ```

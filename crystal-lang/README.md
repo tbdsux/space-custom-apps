@@ -2,6 +2,12 @@
 
 Crystal Lang on space.
 
+## Dev
+
+```
+space dev
+```
+
 ### Framework
 
 [Grip](https://github.com/grip-framework/grip) - https://github.com/grip-framework/grip
@@ -22,4 +28,5 @@ micros:
     include:
       - bin/app
     run: ./app
+    dev: shards run
 ```

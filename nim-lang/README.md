@@ -2,6 +2,12 @@
 
 Nimlang on space.
 
+## Dev
+
+```
+space dev
+```
+
 ### Framework
 
 [Jester](https://github.com/dom96/jester) - The sinatra-like web framework for Nim.
@@ -22,4 +28,5 @@ micros:
     include:
       - app
     run: ./app
+    dev: nimble run
 ```

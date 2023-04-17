@@ -7,7 +7,7 @@ class DemoController < Grip::Controllers::Http
       .put_resp_header("Server", "TornadoServer/6.0.4") # Put a response header.
       .json(                                            # Respond with JSON encoded data.
 {
-        "id" => 1,
+        "message" => "Crystal Lang on Space!",
       }
       )
   end
@@ -21,7 +21,9 @@ class Application < Grip::Application
   end
 
   def port : Int32
-    8080
+    # setup port
+    p = ENV["PORT"] ||= "8080"
+    p.to_i32
   end
 end
 

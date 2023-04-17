@@ -1,15 +1,15 @@
 # https://github.com/dom96/jester#custom-router
 
-import asyncdispatch, jester, strutils
+import asyncdispatch, jester, strutils, os
 
-router myrouter:
+let
+  p = parseInt(getEnv("PORT", "8080"))
+
+settings:
+  port = Port p
+
+routes:
   get "/":
-    resp "It's alive!"
+    resp "Nim Lang on Space!"
 
-proc main() =
-  let settings = newSettings(port = Port(8080))
-  var jester = initJester(myrouter, settings = settings)
-  jester.serve()
 
-when isMainModule:
-  main()

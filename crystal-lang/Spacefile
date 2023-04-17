@@ -11,3 +11,4 @@ micros:
     include:
       - bin/app
     run: ./app
+    dev: shards run

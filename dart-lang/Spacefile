@@ -18,3 +18,4 @@ micros:
       - myapp
     run: ./myapp
     primary: true
+    dev: dart run :server # replace `server` with your main server file

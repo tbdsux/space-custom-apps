@@ -2,6 +2,12 @@
 
 FSharp (F#) on Space
 
+## Dev
+
+```
+space dev
+```
+
 ### Framework
 
 [Falco](https://www.falcoframework.com/) - https://www.falcoframework.com/
@@ -24,7 +30,8 @@ micros:
     engine: custom
     include:
       - bin/Debug/net7.0/linux-x64/publish/fsharp
-    run: ASPNETCORE_URLS=http://+:8080 ./fsharp
+    run: ASPNETCORE_URLS=http://+:${PORT} ./fsharp
+    dev: dotnet run --urls http://localhost:${PORT}
 ```
 
 Spacefile is similar with [CSharp](../csharp/)

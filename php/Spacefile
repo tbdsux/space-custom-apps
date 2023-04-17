@@ -15,4 +15,5 @@ micros:
       - ./bin/php -r "unlink('composer-setup.php');"
       - ./bin/php composer.phar install
     engine: custom
-    run: "./bin/php -S 0.0.0.0:8080 -t public"
+    run: "./bin/php -S 0.0.0.0:${PORT} -t public"
+    dev: "php -S 0.0.0.0:${PORT} -t public"
