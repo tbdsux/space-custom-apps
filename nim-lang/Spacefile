@@ -6,8 +6,9 @@ micros:
     engine: custom
     primary: true
     commands:
-      - curl https://nim-lang.org/choosenim/init.sh --output init.sh && sh init.sh -y
-      - export PATH=/root/.nimble/bin:$PATH && nimble build -y
+      - curl https://nim-lang.org/choosenim/init.sh --output init.sh
+      - sh init.sh -y
+      - bash -c "export PATH=/root/.nimble/bin:$PATH" && nimble build -y
     include:
       - app
     run: ./app
