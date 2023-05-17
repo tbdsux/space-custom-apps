@@ -6,14 +6,15 @@ micros:
     name: slim-app
     src: .
     commands:
-      - apt-get install wget
-      - wget https://dl.zhamao.xin/php-bin/file/php-8.1.10-static-bin-x86_64.tar.gz
-      - mkdir bin && tar -xf php-8.1.10-static-bin-x86_64.tar.gz -C bin
-      - ./bin/php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-      - ./bin/php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-      - ./bin/php composer-setup.php
-      - ./bin/php -r "unlink('composer-setup.php');"
-      - ./bin/php composer.phar install
+      - apt-get update -y
+      - apt-get install -y wget
+      - wget -O php.tar.gz https://dl.zhamao.xin/static-php-cli/php-8.1.18-cli-linux-x86_64.tar.gz
+      - tar -xf php.tar.gz
+      - ./php -r "copy('http://getcomposer.org/installer', 'composer-setup.php');"
+      - ./php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+      - ./php composer-setup.php
+      - ./php -r "unlink('composer-setup.php');"
+      - ./php composer.phar install
     engine: custom
-    run: "./bin/php -S 0.0.0.0:${PORT} -t public"
+    run: "./php -S 0.0.0.0:${PORT} -t public"
     dev: "php -S 0.0.0.0:${PORT} -t public"
